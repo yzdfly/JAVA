@@ -1,5 +1,8 @@
 package Thread01;
 
+/**
+ * Page 10
+ */
 public class MyThread06 extends Thread{
     private int count = 5;
     public MyThread06(String name){
