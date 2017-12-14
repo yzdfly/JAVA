@@ -15,7 +15,7 @@ public class MyThread06 extends Thread{
         super.run();
         while(count>0){
             count--;
-            System.out.println("Thread " + Thread.currentThread().getName() + "'s count is " + count);
+            System.out.println(this.getName()+"'s count is " + count);
         }
     }
 }
