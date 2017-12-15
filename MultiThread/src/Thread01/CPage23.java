@@ -4,8 +4,17 @@ public class CPage23 extends Thread {
     @Override
     public void run() {
         super.run();
-        for(int i = 0; i < 500000; i++){
-            System.out.println("i = " + (i + 1));
+        try {
+            for (int i = 0; i < 50000; i++) {
+                if (this.isInterrupted()) {
+                    System.out.println("Thread stop!");
+                    throw new InterruptedException();
+                }
+                System.out.println("i = " + (i + 1));
+            }
+        }catch (InterruptedException e){
+            System.out.println("Throw into InterruptedException");
         }
+        System.out.println("run after for sentence");
     }
 }
