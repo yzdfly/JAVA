@@ -11,7 +11,7 @@ public class MyObject {
         }
     }
 
-    public void methodB(){
+    synchronized public void methodB(){
         try{
             System.out.println("begin MethodB, current Thread is " +Thread.currentThread().getName());
             Thread.sleep(3000);
